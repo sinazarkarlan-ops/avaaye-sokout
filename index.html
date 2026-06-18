@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AVAAYE SOKOUT</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#9bc7ff">
+</head>
+
+<body>
+
+<header class="header">
+
+    <img src="assets/logo.png"
+         alt="AVAAYE SOKOUT"
+         class="logo">
+
+    <h1>AVAAYE SOKOUT</h1>
+
+    <p>مدیریت موجودی فروشگاه</p>
+
+</header>
+
+<section class="dashboard">
+
+    <div class="card">
+        <h3>تعداد کالاها</h3>
+        <span id="productCount">0</span>
+    </div>
+
+    <div class="card">
+        <h3>ارزش کل موجودی</h3>
+        <span id="inventoryValue">0 تومان</span>
+    </div>
+
+</section>
+
+<section class="actions">
+
+    <button id="addProductBtn">
+        ➕ افزودن کالا
+    </button>
+
+</section>
+
+<section>
+
+    <h2>جستجو</h2>
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="نام کالا را جستجو کنید..."
+    >
+
+</section>
+
+<section>
+
+    <h2>کالاها</h2>
+
+    <div id="productList"></div>
+
+</section>
+
+<section>
+
+    <h2>هشدار موجودی</h2>
+
+    <div id="alertList"></div>
+
+</section>
+
+<section>
+
+    <h2>تاریخچه عملیات</h2>
+
+    <div id="historyList"></div>
+
+</section>
+
+<!-- فرم افزودن و ویرایش کالا -->
+
+<div id="productModal"
+     class="modal hidden">
+
+    <div class="modal-content">
+
+        <h2 id="modalTitle">
+            افزودن کالا
+        </h2>
+
+        <input
+            id="nameInput"
+            placeholder="نام کالا">
+
+        <select id="categoryInput">
+
+            <option value="ساز">
+                ساز
+            </option>
+
+            <option value="سیم">
+                سیم
+            </option>
+
+            <option value="لوازم جانبی">
+                لوازم جانبی
+            </option>
+
+            <option value="کتاب">
+                کتاب
+            </option>
+
+        </select>
+
+        <input
+            id="brandInput"
+            placeholder="برند">
+
+        <input
+            id="quantityInput"
+            type="number"
+            placeholder="موجودی">
+
+        <input
+            id="buyPriceInput"
+            type="number"
+            placeholder="قیمت خرید (تومان)">
+
+        <input
+            id="sellPriceInput"
+            type="number"
+            placeholder="قیمت فروش (تومان)">
+
+        <div class="modal-buttons">
+
+            <button id="saveProductBtn">
+                ذخیره
+            </button>
+
+            <button id="cancelBtn">
+                انصراف
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+
+  window.addEventListener('load', () => {
+
+    navigator.serviceWorker
+      .register('./service-worker.js')
+      .then(() => {
+        console.log('Service Worker Registered');
+      });
+
+  });
+
+}
+</script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "AVAAYE SOKOUT",
+  "short_name": "SOKOUT",
+  "description": "مدیریت موجودی فروشگاه آوای سکوت",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f8ff",
+  "theme_color": "#9bc7ff",
+  "orientation": "portrait",
+  "lang": "fa",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

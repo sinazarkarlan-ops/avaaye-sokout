@@ -1,0 +1,329 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Tahoma,sans-serif;
+    background:#f5f8ff;
+    color:#111;
+    padding:15px;
+}
+
+/* هدر */
+
+.header{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.logo{
+    width:140px;
+    max-width:90%;
+    margin-bottom:10px;
+}
+
+.header h1{
+    font-size:30px;
+    margin-bottom:8px;
+    color:#111;
+}
+
+.header p{
+    color:#666;
+}
+
+/* داشبورد */
+
+.dashboard{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-bottom:25px;
+}
+
+.card{
+    background:white;
+    border-radius:18px;
+    padding:18px;
+    text-align:center;
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,.08);
+}
+
+.card h3{
+    margin-bottom:10px;
+    font-size:15px;
+}
+
+.card span{
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* دکمه ها */
+
+.actions{
+    margin-bottom:20px;
+}
+
+.actions button{
+    width:100%;
+    border:none;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    font-size:16px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    background:
+    linear-gradient(
+        135deg,
+        #9bc7ff,
+        #f6a7d8
+    );
+
+    color:#111;
+}
+
+/* ورودی ها */
+
+input,
+select{
+
+    width:100%;
+
+    padding:13px;
+
+    border:1px solid #d9d9d9;
+
+    border-radius:12px;
+
+    margin-top:8px;
+    margin-bottom:12px;
+
+    font-size:15px;
+}
+
+/* بخش ها */
+
+section{
+    margin-bottom:25px;
+}
+
+section h2{
+    margin-bottom:10px;
+}
+
+/* کارت کالا */
+
+.product-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:15px;
+
+    margin-bottom:12px;
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,.08);
+}
+
+.product-card h3{
+    margin-bottom:8px;
+}
+
+.product-card p{
+    margin:5px 0;
+}
+
+/* دکمه های کالا */
+
+.product-actions{
+
+    display:flex;
+
+    gap:8px;
+
+    margin-top:12px;
+}
+
+.product-actions button{
+
+    flex:1;
+
+    border:none;
+
+    padding:10px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+}
+
+.edit-btn{
+    background:#9bc7ff;
+}
+
+.delete-btn{
+    background:#ffd3d3;
+}
+
+.in-btn{
+    background:#d6ffe0;
+}
+
+.out-btn{
+    background:#ffe7b8;
+}
+
+/* هشدارها */
+
+.stock-warning{
+    border-right:6px solid orange;
+}
+
+.stock-empty{
+    border-right:6px solid red;
+}
+
+.alert-warning{
+
+    background:#fff1d7;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    margin-bottom:8px;
+}
+
+.alert-empty{
+
+    background:#ffe2e2;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    margin-bottom:8px;
+}
+
+/* تاریخچه */
+
+#historyList{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:15px;
+
+    min-height:120px;
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,.08);
+}
+
+.history-item{
+
+    padding:8px 0;
+
+    border-bottom:
+    1px solid #eee;
+}
+
+/* مودال */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    rgba(0,0,0,.5);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+    z-index:1000;
+}
+
+.hidden{
+    display:none;
+}
+
+.modal-content{
+
+    width:100%;
+
+    max-width:450px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:20px;
+}
+
+.modal-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:10px;
+}
+
+.modal-buttons button{
+
+    flex:1;
+
+    border:none;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+}
+
+#saveProductBtn{
+
+    background:
+    linear-gradient(
+        135deg,
+        #9bc7ff,
+        #f6a7d8
+    );
+}
+
+#cancelBtn{
+    background:#eeeeee;
+}
+
+/* موبایل */
+
+@media(max-width:700px){
+
+    .dashboard{
+        grid-template-columns:1fr;
+    }
+
+}
